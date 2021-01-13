@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, #212121, #424242);
+}
+
+.todo-header{
+    width: 100%;
+    display: block;
+}
+
+h1.todo-title{
+    font-size: 22px;
+    line-height: 22px;
+    color: #fefefe;
+    font-weight: 700;
+    font-family: 'Sulphur Point', sans-serif;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.todo-content-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.todo-form{
+    width: 100%;
+    max-width: 250px;
+    background: #fff;
+    padding: 0;
+    border-radius: 3px;
+    position: relative;
+}
+
+.todo-form .todo-input{
+    font-size: 14px;
+    line-height: 14px;
+    color: #212121;
+    font-weight: 300;
+    font-family: 'Sulphur Point', sans-serif;
+    width: 100%;
+    height: 45px;
+    border: none;
+    background: #fff;
+    border-radius: 3px;
+    text-indent: 10px;
+}
+
+.todo-form .todo-input:focus{
+    outline: none;
+}
+
+.todo-form .todo-input:active{
+    outline: none;
+}
+
+.todo-form .todo-submit{
+    height: 45px;
+    width: 45px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.todo-form .todo-submit:focus, .todo-form .todo-submit:active{
+    outline: none;
+}
+
+.todo-list{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    padding-top: 30px;
+}
+
+.todo-wrapper{
+    width: 100%;
+    height: 35px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    flex: 1;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    transition: all .5s ease-in-out;
+}
+
+.todo-text{
+    color: #212121;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    font-family: 'Sulphur Point', sans-serif;
+    flex: 1;
+}
+
+.todo-check{
+    width: 14px;
+    height: auto;
+    display: block;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.todo-checked{
+    background: #95f09d;
+}
+
+.todo-checked .todo-text{
+    text-decoration: line-through;
+}
+
+.todo-remove{
+    width: 14px;
+    height: auto;
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.todo-check svg, .todo-remove svg{
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+}
+
+.todo-check svg path, .todo-remove svg path{
+    fill: #212121;
+}
+
+.todo-check:focus, .todo-check:active, .todo-remove:focus, .todo-remove:active{
+    outline: none;
+}
+
+.todo-removing{
+    opacity: 0;
+    transform: translateX(-100%);
+}
